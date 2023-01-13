@@ -58,7 +58,7 @@ function actualizarSesion(){
     setSessionData(
         {
             token: "JOEL",
-            sesion: sessionData +  1
+            sesion: sessionData.sesion +  1
         }
     )
 }
@@ -68,9 +68,9 @@ function actualizarSesion(){
             <miContexto.Provider value={sessionData}>
             {/*todo lo que esta aqui adentro puede leer los datos de sesionData 
               ademas si se actualiza, los componentes de aqui tambien lo actualizan */}
-              <h1>
+            <h1>
                 *** Ejemplo de useState() y useContext() ***
-              </h1>
+            </h1>
             <Componente1></Componente1>
             <button onClick={actualizarSesion}>Actualizar Sesion</button>
             </miContexto.Provider>
