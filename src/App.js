@@ -8,12 +8,11 @@ import Ejemplo2 from './Hooks/Ejemplo2';
 import MiComponenteConContexto from './Hooks/Ejemplo3';
 import Ejemplo4 from './Hooks/Ejemplo4';
 import GreetingStyles from './Components/pure/greetingStyles';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    {/*<<header className="App-header">*/}
+        {/*<img src={logo} className="App-logo" alt="logo" />*/}
         {/*Componente propio greeting.jsx*/}
         {/*<Greeting name = "Martin"></Greeting>*/}
         {/*<GreetingF name = "Martin"></GreetingF>*/}
@@ -29,8 +28,9 @@ function App() {
             contenido del props.children
           </h3>
         </Ejemplo4>*/}
-        <GreetingStyles name = "Joel "></GreetingStyles>
-      </header>
+        {/*<GreetingStyles name = "Joel "></GreetingStyles>*/}
+        {/*</header>*/}
+        <TaskListComponent></TaskListComponent>
     </div>
   );
 }
