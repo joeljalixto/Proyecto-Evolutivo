@@ -11,7 +11,7 @@ import GreetingStyles from './Components/pure/greetingStyles';
 function App() {
   return (
     <div className="App">
-    {/*<<header className="App-header">*/}
+        {/*<<header className="App-header">*/}
         {/*<img src={logo} className="App-logo" alt="logo" />*/}
         {/*Componente propio greeting.jsx*/}
         {/*<Greeting name = "Martin"></Greeting>*/}
