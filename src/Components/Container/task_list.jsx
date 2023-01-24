@@ -32,7 +32,34 @@ const TaskListComponent = () => {
 
     function completeTask(task){
         console.log("completed this task",task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks[index].completed = !tempTasks[index].completed;
+
+        //we update the state of the component whith the new list of tasks 
+        //and it will update the 
+        //iteracion of the tasks in order to show the taks update 
+        setTasks(tempTasks);
     }
+
+    function deleteTask(task){
+        console.log("Delete this task",task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index,1);
+        setTasks(tempTasks)
+    }
+
+    function addTask(task){
+        console.log("Delete this task",task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task)
+        setTasks(tempTasks)
+    }
+
+
+
 
     return (
         <div>
@@ -62,6 +89,7 @@ const TaskListComponent = () => {
                                         key={index} 
                                         task={task}
                                         complete ={completeTask}
+                                        remove = {deleteTask}
                                         >
                                         </TaskComponent>
                                         )
@@ -71,11 +99,11 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
-                    <TaskForm></TaskForm>
                 </div>
             </div>
             {/*aplicar un for o un map para redendizar a una lista*/}
             {/*<TaskComponent task = {defaultTask}></TaskComponent>*/}
+            <TaskForm add = {addTask}></TaskForm>
         </div>
     );
 };

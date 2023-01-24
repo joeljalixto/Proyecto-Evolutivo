@@ -6,7 +6,7 @@ import { Task } from '../../models/task.class';
 import "../../Styles/task.scss"
 import { LEVELS } from '../../models/levels.enum';
 
-const TaskComponent = ({task,complete}) => {
+const TaskComponent = ({task,complete,remove}) => {
 
     useEffect(() => {
         console.log(`created task`)
@@ -80,7 +80,7 @@ return (
             {/*Execution of function to return icon depending on completion*/}
             {taskCompletedIcon()}
             {/*<span>{task.completed ? "Completed" : "Pending"}</span>*/}   
-            <i className='bi-trash task-action' style={{color:"tomato"}}></i>
+            <i className='bi-trash task-action' style={{color:"tomato"}} onClick = {() => remove(task)} ></i>
         </td>
     </tr>
     );
@@ -88,7 +88,8 @@ return (
 
 TaskComponent.propTypes = {
     task: PropTypes.instanceOf(Task).isRequired,
-    complete: PropTypes.func.isRequired
+    complete: PropTypes.func.isRequired,
+    remove : PropTypes.func.isRequired,
 };
 
 export default TaskComponent;
