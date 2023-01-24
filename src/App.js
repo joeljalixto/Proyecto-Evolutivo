@@ -32,9 +32,9 @@ function App() {
         {/*<GreetingStyles name = "Joel "></GreetingStyles>*/}
         {/*</header>*/}
         {/*Gestion de eventos*/}
-        <Father></Father>
+        {/*<Father></Father>*/}
         
-        {/*<TaskListComponent></TaskListComponent>*/}
+        <TaskListComponent></TaskListComponent>
     </div>
   );
 }
